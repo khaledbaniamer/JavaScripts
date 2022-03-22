@@ -102,7 +102,7 @@ let spp =s.split("");
 
 let  arr=[];
 
-if(spp.length<=3){
+if(spp.length<3){
     if (spp[0]===spp[1]){
         arr.push(arr[0])
     }else{
