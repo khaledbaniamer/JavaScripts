@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="selcetor" onchange="change()">
+        <option value="" selected  disabled>Select</option>
+        <option value="imgs/jordan.jfif">Jordan</option>
+        <option value="imgs/egypt.jpg">Egypt</option>
+        <option value="imgs/lebanon.jpg">Lebanon</option>
+        <option value="imgs/sudia.jpg">Sudia Arabia</option>
+        <option value="imgs/syria.png">Syria</option>
+    </select>
+
+    <div id="image" style="border:1px solid ; background-color:grey ; width: 200px; height: 200px;" >
+    <img id="pic" src="" alt="" width="200px" height="200px">
+    </div>
+
+    <p id="hi"></p>
+
+    <script>
+
+
+        let y = document.getElementById('pic')
+        function change(){
+            let x = document.getElementById('selcetor').value;
+            y.src = `${x}`
+        }
+    </script>
+</body>
+</html>

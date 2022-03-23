@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <select name="" id="family" onchange="change()">
+        <option value="Arial, Helvetica, sans-serif" selected >Arial</option>
+        <option value="'Times New Roman', Times, serif">Times New Roman</option>
+        <option value="Verdana, Geneva, Tahoma, sans-serif">Tahoma</option>
+        <option value="'Courier New', Courier, monospace">Courier New</option>
+    </select>
+
+    <input type="number" value="12"  min="0" id="fontSize" onchange="font()">
+
+    <label >Italic</label>
+    <input type="checkbox" name="" id="italic" value="italic" onchange="changeItalic()">
+
+    <label >Bold</label>
+    <input type="checkbox" name="" id="bold" value="bold" onchange="changeBold()">
+
+    <label >Underline</label>
+    <input type="checkbox" name="" id="underline" value="underline"   onchange="changeUnderline()">
+    <br>
+    <br>
+
+    <div id="text" style="border: 1px solid; width: 500px; height: 150px;">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sequi eaque error rem ullam autem tempora ut! 
+   </div>     
+
+   <script>
+       let text = document.getElementById('text');
+       function change(){
+           let x = document.getElementById('family').value;
+           text.style.fontFamily = x
+       }
+
+       function changeItalic(){
+        if (italic.checked == true){
+        let y = document.getElementById('italic').value;
+        text.style.fontStyle = y
+        }else{
+        
+        text.style.fontStyle = 'normal'
+        }
+       }
+
+       function changeBold(){
+           if(bold.checked ==true){
+        let y = document.getElementById('bold').value;
+        text.style.fontWeight = y
+           } else{
+            text.style.fontWeight = 'normal'
+           }
+       }
+
+       function changeUnderline(){
+           if(underline.checked==true){
+        let y = document.getElementById('underline').value;
+        text.style.textDecoration = y
+           }else{
+            text.style.textDecoration = 'none'
+           }
+       }
+
+       function font(){
+        let y = document.getElementById('fontSize').value;
+        text.style.fontSize = `${y}px`
+       }
+   </script>
+</body>
+</html>
