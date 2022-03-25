@@ -35,7 +35,9 @@
 
     <div id="text" style="border: 1px solid; width: 500px; height: 150px;">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi sequi eaque error rem ullam autem tempora ut! 
-   </div>     
+   </div> 
+   
+   
 
    <script>
        let text = document.getElementById('text');
@@ -56,8 +58,8 @@
 
        function changeBold(){
            if(bold.checked ==true){
-        let y = document.getElementById('bold').value;
-        text.style.fontWeight = y
+                let y = document.getElementById('bold').value;
+                text.style.fontWeight = y
            } else{
             text.style.fontWeight = 'normal'
            }
@@ -65,8 +67,8 @@
 
        function changeUnderline(){
            if(underline.checked==true){
-        let y = document.getElementById('underline').value;
-        text.style.textDecoration = y
+                let y = document.getElementById('underline').value;
+                text.style.textDecoration = y
            }else{
             text.style.textDecoration = 'none'
            }
@@ -76,6 +78,9 @@
         let y = document.getElementById('fontSize').value;
         text.style.fontSize = `${y}px`
        }
+
+
+
    </script>
 </body>
 </html>
