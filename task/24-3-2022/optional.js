@@ -122,19 +122,15 @@ console.log("task10")
 function longestKey(obj){
     let a = Object.keys(obj)
     let len = a[0]
+    let x
     for(let i=0 ;i< a.length;i++){
         if(len.length<a[i].length){
             len = a[i]
+            x = obj[len]
         }
     }
-    
+    return x
 }
 
-console.log(longestKey({car:1, school:2, monster:3, alexMercer:4}))
-if(x<0){
+console.log(longestKey({car:1, school:2, monster:3, alexMercer:4 }))
 
-}else{
-
-}
-
-x<0 ? true :false;
