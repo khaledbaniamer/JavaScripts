@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainForm {
+            display: flex;
+        }
+
+        #card {
+            border: 1px solid gray;
+            width: 600px;
+        }
+
+        #card img {
+            height: 300px;
+            width: 400px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-right: 300px;
+        }
+
+
+        input[type=submit] {
+            margin-top: 20px;
+        }
+
+        #language {
+            display: flex;
+
+        }
+        #card{
+            text-align: center;
+            padding: 5px;
+            display: none;
+        }
+
+  
+  
+    </style>
+</head>
+
+<body>
+    <h1>Personal Data </h1>
+
+    <div id="mainForm">
+        <form>
+            <label>Full Name</label>
+            <input type="text" id="name"><br>
+
+            <label>Age</label>
+            <input type="number" id="age" min="0" max="30"><br>
+
+            <label>Your major and university</label>
+            <input type="text" id="major"><br>
+
+            <label>gender</label>
+            <div>
+                <input type="radio" name="gender" class="gender" value="1"> <label>Male</label>
+                <input type="radio" name="gender" class="gender" value="0"> <label>Female</label>
+            </div><br>
+            <label>Description</label>
+            <textarea id="description" name="" id="" cols="30" rows="10"></textarea><br>
+
+
+            <label>Birth Date </label>
+            <input type="date" id="date"><br>
+
+            <div id="language">
+
+                <input type="checkbox" class="lang" value="c++">
+                <label for=""> c++</label>
+
+                <input type="checkbox" class="lang" value="python">
+                <label for=""> python</label>
+
+                <input type="checkbox" class="lang" value="php">
+                <label for=""> php</label>
+
+                <input type="checkbox" class="lang" value="javascripts">
+                <label for=""> javascripts</label>
+
+                <input type="checkbox" class="lang" value="java">
+                <label for=""> java</label>
+
+            </div><br>
+
+
+            <label>siblings number </label>
+            <input type="text" id="brothers">
+
+            <input type="submit" onclick="showCard()">
+
+        </form>
+        <div id="card" >
+            <img id="pic" src="" alt="">
+            <h3 id="cardname"></h3>
+            <div id="cardage"></div>
+            <div id="cardgender"></div>
+            <div id="cardselfDescription"></div>
+            <div id="cardmajorUn"></div>
+            <div id="cardbd"></div>
+            <div id="cardpl"></div>
+            <div id="cardbrothers"></div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="task1.js"></script>
+</body>
+
+</html>

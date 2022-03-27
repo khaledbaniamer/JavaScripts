@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+      
+</head>
+
+<body>
+    <h1>project Data </h1>
+
+    <div id="mainForm">
+        <form>
+            <label>Subject</label>
+            <input type="text" id="subject"><br>
+
+
+            <label>Description</label>
+                <textarea id="description" name="" id="" cols="30" rows="10"></textarea><br>
+
+            <label>Technology used</label>
+            <input type="text" id="tech"><br>
+
+            <label>User Types</label>
+            <input type="text" id="usertype"><br>
+
+
+
+            <input type="submit" onclick="showCard()">
+
+        </form><br>
+        <div id="card" style="display: none; border: 1px solid;">
+            
+            <h3 id="cardname"></h3>
+
+           
+            <div id="cardselfDescription"></div>
+            
+            <div id="cardtech"></div>
+            
+            <div id="cardusertype"></div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="task2.js"></script>
+</body>
+
+</html>
