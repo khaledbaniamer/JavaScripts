@@ -20,6 +20,8 @@ document.getElementById("show").addEventListener('click',function(event){
     
     let x  = new XMLHttpRequest()
     x.open('GET','data.json')
+    
+    console.log(x)
    
     
     x.onload = function(){
