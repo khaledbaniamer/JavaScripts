@@ -98,31 +98,62 @@ if(len%2===0){
 //let s ="anm"
 
 
-let spp =s.split("");
+// let spp =s.split("");
 
-let  arr=[];
+// let  arr=[];
 
-if(spp.length<3){
-    if (spp[0]===spp[1]){
-        arr.push(arr[0])
-    }else{
-        arr.push(spp[0])
-        arr.push(spp[1])
-    }
-}
-else{
-for(let i= 0 ;i <=spp.length-1;i++){
-    if (!arr.includes(spp[i])){
-        arr.push(spp[i])
-    }
-    else{
+// if(spp.length<3){
+//     if (spp[0]===spp[1]){
+//         arr.push(arr[0])
+//     }else{
+//         arr.push(spp[0])
+//         arr.push(spp[1])
+//     }
+// }
+// else{
+// for(let i= 0 ;i <=spp.length-1;i++){
+//     if (!arr.includes(spp[i])){
+//         arr.push(spp[i])
+//     }
+//     else{
         
-        arr.push(spp[i].concat(spp[i+1]))
-        i++;
+//         arr.push(spp[i].concat(spp[i+1]))
+//         i++;
+//     }
+    
+// }  
+    
+// }
+
+// console.log(arr)
+
+
+    async function loadData(){
+        const response = await fetch('https://www.breakingbadapi.com/api/characters')
+        const data = await response.json()
+    
+        for(let i = 0 ; i<data.length ; i ++ ){
+            document.getElementById("dropList").innerHTML += `<option> ${data[i].name} </option>`;
+
+        }
+
+    
+        document.getElementById("dropList").onchange = function(){
+                for (let k = 0 ; k<data.length;k++){
+                    if(data[k].name === document.getElementById("dropList").value){
+                        document.getElementById("show").innerHTML =data[k].nickname;
+                    }
+                }
+            //document.getElementById("show").innerHTML = document.getElementById("dropList").value;
+        
+        };
+
     }
     
-}  
-    
-}
+    loadData()   
 
-console.log(arr)
+
+
+
+
+
