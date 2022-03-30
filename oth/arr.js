@@ -47,18 +47,6 @@ document.getElementById("show").addEventListener('click',function(event){
     x.send()
 });
 
-// function data(y){
-//     var allData =''
-//     for(let i = 0 ; i<y.length;i++){
-//         allData+='<tr>' +
-//         '<td>'+ i +'</td>'
-//         '<td>'+y[i].name +'</td>' 
-//         '<td>'+ y[i].email+'</td>' 
-//         '<td>'+ y[i].phoneNumber +'</td>'+
-//         '</tr>'
-//     }
-//     document.getElementById("bodytable").insertAdjacentElement("beforeend" , allData)
-// }
 
 
 

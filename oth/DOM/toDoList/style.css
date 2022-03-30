@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(23, 136, 74);
+}
+h1{
+    text-align: center;
+    color: rgb(230, 212, 212);
+}
+#main{
+    margin: auto;
+    height: 400px;
+    width: 500px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px white;
+    
+    
+}
+#text{
+    height: 33px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius:5px ;
+    border: 1px gray;
+    background-color: white;
+}
+#btn{
+    height: 35px;
+    width: 100px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+    border-radius:5px ;
+    background-color: white;
+    border: 1px gray;
+}
+#btn:hover {
+    background-color: grey;
+}
+#task{
+    margin: 5px;
+    width: 430px;
+    border: 1px solid;
+    border-radius: 4px;
+
+}
+span{
+    margin: 7px;
+    color: brown;
+    
+}
+span:nth-child(2){
+    color: blue;
+}
+span:nth-child(1){
+    color: black;
+}
+#task {
+    display: flex;
+
+    justify-content: space-between;
+   
+}
+#delete{
+    cursor: pointer;
+}
+
