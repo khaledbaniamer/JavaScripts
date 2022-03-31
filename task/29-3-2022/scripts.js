@@ -1,24 +1,31 @@
-async function loadData(){
+
+
+async function loadData() {
     const response = await fetch('https://www.breakingbadapi.com/api/characters')
     const data = await response.json()
+    //console.log(data)
 
-    for(let i = 0 ; i<data.length ; i ++ ){
+    for (let i = 0; i < data.length; i++) {
         document.getElementById("dropList").innerHTML += `<option> ${data[i].name} </option>`;
 
     }
 
 
-    document.getElementById("dropList").onchange = function(){
-            for (let k = 0 ; k<data.length;k++){
-                if(data[k].name === document.getElementById("dropList").value){
-                    document.getElementById("show").innerHTML =data[k].nickname;
-                }
+    document.getElementById("dropList").onchange = function () {
+        for (let k = 0; k < data.length; k++) {
+            if (data[k].name === document.getElementById("dropList").value) {
+                document.getElementById("show").innerHTML = data[k].nickname;
             }
+        }
         //document.getElementById("show").innerHTML = document.getElementById("dropList").value;
-    
+
     };
 
 }
 
-loadData() 
+loadData()
+
+
+
+
 

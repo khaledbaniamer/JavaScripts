@@ -34,11 +34,11 @@
 console.log(sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]));
 console.log(sockMerchant(7, [1, 2, 1, 2, 1, 3, 2]));
     
-*/  
 
 
-/* Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
+/* Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.*/
+/*
 var twoSum = function(nums, target) {
     let res=[];
     for(let i = 0 ; i<nums.length-1 ; i++){
@@ -49,8 +49,13 @@ var twoSum = function(nums, target) {
         }
 
     }
+    for( const [index , num] of nums.entries()){
+        
+    }
     return res;
 };
+
+
 
 console.log(twoSum([3,2,4],6));
 console.log(twoSum([2,7,11,15],9))
@@ -150,10 +155,21 @@ if(len%2===0){
 
     // }
     
-    // loadData()   
+    // loadData()  
+    function minMax(arr) {
+        let a = []
+        arr = arr.sort(function(a,b){
+            return a-b ;
+        })
+        a.push(arr[0]);
+        a.push(arr[arr.length-1])
+       return a
+    }
 
+console.log(minMax([1, 2, 3, 4, 5]))
+console.log(minMax([2334454, 5]))
+console.log(minMax([1]))
 
-
-
+    //sortIt([4, 10, 3])
 
 
