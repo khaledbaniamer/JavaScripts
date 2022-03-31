@@ -22,6 +22,7 @@
   }
 #continaer *{
       margin-bottom: 20px;
+      padding: 30px;
   }
 
 h1{
@@ -107,4 +108,114 @@ h1{
     margin-left: 50px;
     color: green;
     font-style: italic;
+}
+
+/* media screen for tablet  */
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    
+    #continaer *{
+        margin-bottom: 5px;
+        padding: 20px;
+    }
+
+    h1{
+        grid-area:1/9/5/13;
+    }
+    
+    /* Scored section style  */
+    
+    #scoreCard{
+        grid-area: 5/3/9/19;
+    }
+    
+    #status {
+        width: 50px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    #congratulation--fail , #score{
+       padding: 10px;
+       font-size: 15px;
+    
+    }
+
+    /* show button style */
+
+        #show-analysis{
+            grid-area: 9/9/11/11;
+        }
+        #show-analysis{
+            padding: 15px;
+            font-size: 15px;
+            width: 150px;
+            margin: 20px;
+        }
+
+        
+    /* Analysis section style  */
+
+        #qAnalysis{
+            grid-area: auto/3/auto/19;
+
+            /* opacity: 0; */
+        }
+
+
+    
+}
+
+/* media screen for mobile */
+
+@media screen and (max-width: 424px){
+
+    #continaer *{
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+
+    h1{
+        grid-area:1/9/5/13;
+        font-size: 15px;
+    }
+    
+    /* Scored section style  */
+    
+    #scoreCard{
+        grid-area: 5/3/7/19;
+    }
+    
+    #status {
+        width: 30px;
+        padding: 10px;
+        font-size: 10px;
+    }
+    
+    #congratulation--fail , #score{
+       padding: 5px;
+       font-size: 10px;
+    
+    }
+
+    /* show button style */
+
+        #show-analysis{
+            grid-area: 7/9/11/11;
+        }
+        #show-analysis{
+            padding: 10px;
+            font-size: 10px;
+            width: 95px;
+            margin: 20px;
+        }
+
+        
+    /* Analysis section style  */
+
+        #qAnalysis{
+            grid-area: auto/3/auto/19;
+            font-size: 10px;
+        }
+
 }
