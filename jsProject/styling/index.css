@@ -9,9 +9,11 @@
   body {
     font-family: "Poppins", sans-serif;
     color: #444;
-    background-color: #f3f3f3;
-    height: 100vh;
-    padding: 2rem;
+    /* background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); */
+    /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%); */
+    /* background-color: #4b3755dc; */
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+
   }
 
 #continaer{
@@ -19,16 +21,24 @@
     grid-template-columns: repeat(20 , 1fr);
     grid-template-rows: repeat(auto, 1fr);
     
+    
   }
 #continaer *{
       margin-bottom: 20px;
-      padding: 30px;
+      padding: 20px;
+  }
+
+  #card , #nextqustion{
+    grid-area: auto/4/auto/16;
+    display: flex;
+    flex-direction: column;
   }
 
 h1{
     grid-area:1/9/5/11;
     text-align: center;
     padding: 10px;
+    color: #ffffff;
     
 }
 
@@ -40,7 +50,9 @@ h1{
     justify-content: space-between;
     padding: 20px;
     border: 1px solid #444;;
-    
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: rgba(255, 255, 255, 0.521) 0px 5px 20px;
 }
 
 #status {
@@ -72,12 +84,21 @@ h1{
     grid-area: 9/9/11/11;
 }
 #show-analysis{
-    background-image: linear-gradient(to top left, #ffb003, #ffcb03);    border: white 1px;
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);    
+    border: white 1px;
     border-radius: 35px;
     padding: 25px;
     color: #444;
-    font-size: 15px;
+    font-size: 17px;
     cursor: pointer;
+
+    
+}
+
+#show-analysis:hover{
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transition: .5s;
 }
 
 
@@ -85,14 +106,18 @@ h1{
 
 #qAnalysis{
     grid-area: auto/4/auto/16;
-    border: 1px solid #444;;
+    /* border: 1px solid #444;; */
     padding: 20px;
     /* opacity: 0; */
+    background-color: rgb(238, 235, 235);
+
+    border-radius: 50px;
+    box-shadow: rgba(255, 255, 255, 0.521) 0px 5px 20px;
 }
 
 
 #choice4-g1{
-    background-color: red;
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
     
 }
 .statusqustion:nth-child(3){
@@ -101,7 +126,7 @@ h1{
     font-style: italic;
 }
 #choice1-g1{
-    background-color: green;
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 
 #statusqustion{
