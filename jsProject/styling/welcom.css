@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url("https://fedoramagazine.org/wp-content/uploads/2017/05/f28.png");
+/* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 55vh;
+}
+
+::selection{
+    color: #fff;
+    background: #04284e;
+}
+
+h1{
+	color: white;
+	font-size: 75px;
+	text-align: center;
+    margin-top: 20%;
+}
+
+.button-73 {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block; 
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 45%;
+  }
+  
+  .button-73:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .button-73:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .button-73 {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+  }
+
+  a{
+      text-decoration: none;
+  }

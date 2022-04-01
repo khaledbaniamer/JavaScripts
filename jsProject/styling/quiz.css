@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-image: url("https://fedoramagazine.org/wp-content/uploads/2017/05/f28.png");
+/* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+}
+.img{
+    position: fixed;
+}
+h1{
+    color: rgb(255, 255, 255);
+}
+#title{
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, #0f0c298b, #302b6396, #24243e91);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.questions{
+    margin: 3rem auto;
+    width: 50vw;
+    padding: 2rem;
+    background: rgba(59, 77, 116, 0.45);
+    cursor: default;
+    border-radius: 1rem;
+    text-align: center;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+
+}
+#question{
+    margin-bottom: 1rem;
+}
+.option{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: solid 0.1rem blue;
+    width: 15rem;
+    background: lightblue;
+    border-radius: 1rem;
+}
+.option:hover{
+    color: white;
+}
+ol{
+    position: relative;
+    padding: 0 1.5rem;
+    color: rgb(1, 7, 73);
+}
+
+
+
+.button-73 {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block; 
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 45%;
+  }
+  
+  .button-73:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .button-73:active {
+    transform: scale(1.025);
+  }
+  
+  @media (min-width: 768px) {
+    .button-73 {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+  }
