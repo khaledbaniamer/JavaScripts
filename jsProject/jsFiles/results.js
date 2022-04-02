@@ -1,41 +1,110 @@
-// const qustion = document.querySelector("qust");
-// const chooise = document.getElementsByClassName("cho")
-// const nextqustion = document.getElementById("nextqustion")
-// const card = document.getElementById("card")
-// let numberOfQustion = -1;
+let congratulation = document.getElementById("congratulation--fail")
+let scoreCard = document.getElementById("scoreCard")
+let score = document.getElementById("score");
+let status = document.getElementById("status")
+let showAnalysis = document.getElementById("show-analysis")
+let qustionsAnalysis = document.getElementById("qAnalysis")
+let singleQustion = document.getElementById("qustionPart")
+let choice = document.getElementsByClassName("btn")
+let resultCount = 0;
+let totalResult = 0;
 
 
-// nextqustion.addEventListener("click",function(){
-// if(numberOfQustion++<19){
-// let x = new XMLHttpRequest()
 
-// x.open('GET','qustions.json') 
-// x.onload = function(){
 
-//     let qustionArray = JSON.parse(x.responseText);
-//     let content = "";
-//         content =` 
-//         <div class="qust">${qustionArray[numberOfQustion].question}</div>
-//         <input type="radio" name="m" class="cho"> <label>${qustionArray[numberOfQustion].a}</label><label class="resl"></label>
-//         <input type="radio" name="m" class="cho"> <label>${qustionArray[numberOfQustion].b}</label><label class="resl"></label>
-//         <input type="radio" name="m" class="cho"> <label>${qustionArray[numberOfQustion].c}</label><label class="resl"></label>
-//         <input type="radio" name="m" class="cho"> <label>${qustionArray[numberOfQustion].d}</label><label class="resl"></label`
+let x = new XMLHttpRequest()
+x.open('GET', 'qustions.json')
 
-//     card.innerHTML = content;
-// const choiceSelected = document.getElementsByClassName("cho");
-// for(let i = 0 ; i<choiceSelected.length ; i ++){
-//     choiceSelected[i].addEventListener("change" , function(){
-//         if(choiceSelected[i].checked){
-//         localStorage.setItem(`${numberOfQustion}`,`${i}`)
-//     }
-//    }) 
-// }
-// }
-// x.send()
-// numberOfQustion ++ ;
-// }else{
-//     nextqustion.disabled = true
-// }
-// })
+x.onload = function () {
+    var result = JSON.parse(x.responseText)
+
+    for (let i = 0; i < 20; i++) {
+        if (localStorage.getItem(`${i}`) == result[i].correct) {
+            resultCount++;
+        }
+    }
+    console.log(resultCount)
+    totalResult = (resultCount / 20) * 100;
+
+
+    if (resultCount < 10) {
+
+        scoreCard.innerHTML = `            
+        <div id="congratulation--fail">Hard Luck!</div>
+        <div id="score">Your score is: ${totalResult}% </div>
+        <div id="fail">Fail</div>`
+
+    } else {
+        scoreCard.innerHTML = `            
+        <div id="congratulation--fail">congratulation!</div>
+        <div id="score">Your score is: ${totalResult}% </div>
+        <div id="pass">Pass</div>`
+    }
+
+    let qustionData = ""
+
+    for (let i = 0; i < result.length; i++) {
+
+            qustionData += `        
+        
+            <div id="qustion">Q ${i + 1}:${result[i].question}</div>
+            <div id="choices">
+                <div class="choice">
+                    <input type="button" disabled name="group1" class="btn" value="${result[i].a}">
+                </div>
+                <div class="choice">
+                    <input type="button" disabled name="group1" class="btn" value="${result[i].b}">
+                </div>
+                <div class="choice">
+                    <input type="button" disabled name="group1" class="btn" value="${result[i].c}">
+                </div>
+                <div class="choice">
+                    <input type="button" disabled name="group1" class="btn" value="${result[i].d}">
+                </div>
+            </div>
+          
+        `
+        qustionsAnalysis.innerHTML = qustionData;
+    }
+        let c = 0 ;
+        for(let i = 0 ; i<20; i++){
+
+            // c++;
+            // if(c%4==0){
+                    for(let j =0 ; j<4 ; j++){
+                    // console.log(localStorage.getItem(`${i}`))
+                    if(localStorage.getItem(`${i}`)==j){
+                        console.log(choice[j].value)
+
+                    }
+                }
+            // }
+            if(localStorage.getItem(`${i}`) == result[i].correct){
+
+                
+
+            }
+        }
+  
+        
+
+
+
+    
+
+
+       
+    showAnalysis.addEventListener("click", function () {
+        qustionsAnalysis.style.opacity = 1;
+    })
+
+}
+
+x.send()
+
+
+
+
+
 
 

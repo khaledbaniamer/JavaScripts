@@ -268,5 +268,15 @@ div .btn{
   #sectionTest{
       font-size:60px;
       color: white;
-    padding: 30%;
+        padding: 25%;
+        
   }
+
+  a{
+      text-decoration: none;
+      
+  }
+
+#card p{
+    padding: 25% 0;
+}

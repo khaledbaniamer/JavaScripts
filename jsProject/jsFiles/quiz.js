@@ -39,7 +39,7 @@ if(count==6){
             numberOfQustion =4
         }
         if(numberOfQustion==10){
-            card.innerHTML = `<div id="sectionTest">Techniqal Test</div>` 
+            card.innerHTML = `<div id="sectionTest">Technical Test</div>` 
             count = 0;
             numberOfQustion =9
         }
@@ -47,17 +47,18 @@ if(count==6){
 
 for(let i = 0 ; i<btn.length ; i++ ){
     btn[i].addEventListener("click" , function(){
-        console.log(btn[i].value);
-        sessionStorage.setItem(`${numberOfQustion}` , `${i}`)
+        
+        localStorage.setItem(`${numberOfQustion}` , `${i}`)
     })
    
 }
 count++ ;
 numberOfQustion++;
-
-
 }
-
+if(numberOfQustion==20){
+    card.innerHTML=`<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
+ 
+}
 x.send()
 })
 

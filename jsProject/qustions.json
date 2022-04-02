@@ -7,7 +7,7 @@
         "b": "99",
         "c": "100",
         "d": "102",
-        "correct": "c"
+        "correct": "2"
     },
 
     {
@@ -17,7 +17,7 @@
         "b": "13",
         "c": "14",
         "d": "15",
-        "correct": "d"
+        "correct": "3"
     },
 
     {
@@ -27,7 +27,7 @@
         "b": "Wednesday",
         "c": "Thursday",
         "d": "Friday",
-        "correct": "c"
+        "correct": "2"
         },
     {
     
@@ -36,7 +36,7 @@
         "b": "11:30 PM",
         "c": "1:25 AM",
         "d": "none ",
-        "correct": "a"
+        "correct": "0"
         },
 
     {
@@ -47,7 +47,7 @@
         "c": "5521",
         "d": "1275",
 
-        "correct": "d"
+        "correct": "3"
     },
 
 
@@ -60,7 +60,7 @@
         "c": "go to work with",
         "d": "go to work by",
 
-        "correct": "d"
+        "correct": "3"
     },
 
     {
@@ -70,7 +70,7 @@
         "c": "don't go usually",
         "d": "do not go usually",
 
-        "correct": "b"
+        "correct": "1"
     },
 
     {
@@ -80,7 +80,7 @@
         "c": "for to buy",
         "d": "for buying",
 
-        "correct": "a"
+        "correct": "0"
     },
 
     {
@@ -90,7 +90,7 @@
         "c": "everything",
         "d": "something",
 
-        "correct": "a"
+        "correct": "0"
     },
 
     {
@@ -101,7 +101,7 @@
         "d": "arrived",
 
 
-        "correct": "b"
+        "correct": "1"
     },
 
 
@@ -116,7 +116,7 @@
         "c": "<img>",
         "d": "<p>",
 
-        "correct": "d"
+        "correct": "3"
     },
 
     {
@@ -126,7 +126,7 @@
         "c": "href",
         "d": "a",
 
-        "correct": "a"
+        "correct": "0"
     },
 
     {
@@ -136,7 +136,7 @@
         "c": "#selector",
         "d": "selector",
 
-        "correct": "c"
+        "correct": "2"
     },
 
     {
@@ -146,7 +146,7 @@
         "c": "print",
         "d": "a + c",
 
-        "correct": "d"
+        "correct": "3"
     },
 
     {
@@ -156,7 +156,7 @@
         "c": "toString()",
         "d": "none",
 
-        "correct": "b"
+        "correct": "1"
     },
 
     {
@@ -166,7 +166,7 @@
         "c": "1 , 4 , 5",
         "d": "2 , 3 , 4",
 
-        "correct": "a"
+        "correct": "0"
     },
 
     {
@@ -176,7 +176,7 @@
         "c": "async",
         "d": "function",
 
-        "correct": "c"
+        "correct": "2"
     },
 
     {
@@ -186,7 +186,7 @@
         "c": "It is a scripting language used to make the website interactive",
         "d": "All",
 
-        "correct": "c"
+        "correct": "2"
     },
 
     {
@@ -196,7 +196,7 @@
         "c": "elementById(id)",
         "d": "getElementById(id)",
 
-        "correct": "d"
+        "correct": "3"
     },
 
     {
@@ -206,7 +206,7 @@
         "c": "square brackets []",
         "d": "double quotes ",
 
-        "correct": "b"
+        "correct": "1"
     }
 
 
