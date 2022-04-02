@@ -15,14 +15,13 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: #2c1437;
-    
-    /* background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); */
 }
 
 .About{
     margin: 2% 15% 0% 15%;
     /* background: #dcd8eb33; */   
     border-radius: 15px;
+    background-color: #a38cee0f;
 }
 p {
     margin: 50%;
@@ -325,8 +324,4 @@ p{
     font-size: 1rem;
 }
 
-}
-
-a{
-    text-decoration: none;
 }
