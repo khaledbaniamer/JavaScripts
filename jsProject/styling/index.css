@@ -9,6 +9,7 @@
   body {
     font-family: "Poppins", sans-serif;
     color: #444;
+    /* background-color: #160d1b; */
     
     /* background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); */
     /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%); */
@@ -256,16 +257,24 @@ h1{
 /* Analysis section style  */
 
 #qAnalysis{
-    opacity: 0;
-    grid-area: auto/4/auto/16;
+    grid-area: auto/4/auto/16; 
     font-size: 20px;
     padding: 20px;
+    opacity: 0;
+
+}
+
+
+.all-card{
+
+    
     background-color: #ffffffc8;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
         rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
         rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
+
 
 .btn-correct{
     width: 70%;
@@ -378,6 +387,8 @@ h1{
         }
 
 
+
+
     
 }
 
@@ -413,6 +424,25 @@ h1{
     
     }
 
+    #fail{
+        
+        width: 50px;
+        padding: 7px;
+        font-size: 15px;
+    }
+    
+    #pass{
+        width: 50px;
+        padding: 7px;
+        font-size: 15px;
+    }
+    #status {
+        width: 50px;
+        padding: 7px;
+        font-size: 15px;
+        
+    }
+
     /* show button style */
 
         #show-analysis{
@@ -431,6 +461,26 @@ h1{
         #qAnalysis{
             grid-area: auto/3/auto/19;
             font-size: 10px;
+        }
+
+        .btn-correct{
+
+            font-size: 10px;
+        }
+        
+        .btn-fail{
+
+            font-size: 10px;
+        }
+        .btn{
+
+            font-size: 10px;
+        }
+
+        
+
+        #qustion{
+            padding: 10px;
         }
 
 }

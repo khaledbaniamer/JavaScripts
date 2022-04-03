@@ -180,10 +180,10 @@
     },
 
     {
-        "question": "Which of the following statement(s) is true about the JavaScript?",
-        "a": "It is an advanced version of Java for Desktop and Mobile application development",
-        "b": "It is a markup language of Java to develop the webpages",
-        "c": "It is a scripting language used to make the website interactive",
+        "question": "What are all the types of Pop up boxes available in JavaScript?",
+        "a": "Alert",
+        "b": "Confirm and",
+        "c": "Prompt",
         "d": "All",
 
         "correct": "2"
