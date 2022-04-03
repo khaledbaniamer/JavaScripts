@@ -42,7 +42,7 @@ body {
     background: linear-gradient(to right, #0e0d0d53 0, rgba(225, 159, 236, 0.421) 10%, #2c1437 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 8s linear infinite;
+    animation: shine 5s linear infinite;
     animation-fill-mode: forwards;
     -webkit-text-size-adjust: none;
     text-decoration: none;
@@ -55,12 +55,12 @@ body {
         background-position: 0;
     }
 
-    60% {
-        background-position: 200px;
-    }
+    /* 60% {
+        background-position: 500px;
+    } */
 
     100% {
-        background-position: 500px
+        background-position: 600px
     }
 }
 

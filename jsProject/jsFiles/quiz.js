@@ -1,5 +1,3 @@
-console.log("hjdhfkj")
-
 const card = document.getElementById("card");
 const qustion = document.querySelector(".qust");
 const choices = document.getElementById("choices");
@@ -17,7 +15,7 @@ next.addEventListener("click" , function(){
 let x = new XMLHttpRequest()
 x.open('GET','qustions.json')
 
-
+next.disabled = true;
 x.onload = function(){
 let y = JSON.parse(x.responseText)
 
@@ -43,12 +41,14 @@ if(count==6){
             count = 0;
             numberOfQustion =9
         }
+        next.disabled = false;
 }
 
 for(let i = 0 ; i<btn.length ; i++ ){
     btn[i].addEventListener("click" , function(){
         
-        localStorage.setItem(`${numberOfQustion}` , `${i}`)
+        sessionStorage.setItem(`${numberOfQustion}` , `${i}`)
+        next.disabled = false ;
     })
    
 }
@@ -61,5 +61,34 @@ if(numberOfQustion==20){
 }
 x.send()
 })
+
+let second = 59 ;
+let minute = 29;
+let flag ; 
+let y = setInterval(myTimer,1000)
+
+function myTimer() {
+    
+document.getElementById("timer").innerHTML =`<i class="fa fa-clock-o" aria-hidden="true" >  ${minute+':'+second}</i>` 
+console.log(minute+':'+second)
+second--;
+if(minute==0 && second == 0){
+    flag = true;
+    console.log(flag)
+    
+}
+
+if(second==0){
+    minute--;
+    second=59;
+}
+
+if(minute==-1){
+    minute = 0
+    clearInterval();
+    card.innerHTML=`<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
+    
+}
+}
 
 

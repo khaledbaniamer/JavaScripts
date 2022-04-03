@@ -5,6 +5,7 @@ let status = document.getElementById("status")
 let showAnalysis = document.getElementById("show-analysis")
 let qustionsAnalysis = document.getElementById("qAnalysis")
 let singleQustion = document.getElementById("qustionPart")
+let logout = document.getElementById("logout")
 let resultCount = 0;
 let totalResult = 0;
 
@@ -19,7 +20,7 @@ x.onload = function () {
     var result = JSON.parse(x.responseText)
 
     for (let i = 0; i < 20; i++) {
-        if (localStorage.getItem(`${i}`) == result[i].correct) {
+        if (sessionStorage.getItem(`${i+1}`) == result[i].correct) {
             resultCount++;
         }
     }
@@ -80,7 +81,7 @@ x.onload = function () {
                 
                 qqqq[l].setAttribute("class", "btn-correct")
                 
-            }else if (l == localStorage.getItem(`${j+1}`)){
+            }else if (l == sessionStorage.getItem(`${j+1}`)){
                 qqqq[l].setAttribute("class", "btn-fail")
             }else{
                 qqqq[l].setAttribute("class", "btn")
@@ -93,9 +94,7 @@ x.onload = function () {
     }
 
 
-    
- console.log(allqqq)
-     
+      
     showAnalysis.addEventListener("click", function () {
         qustionsAnalysis.style.opacity = 1 ;
     })
@@ -103,6 +102,10 @@ x.onload = function () {
 }
 
 x.send()
+
+logout.addEventListener("click" , function(){
+    window.location.href = "http://127.0.0.1:5500/jsProject/home.html"
+})
 
 
 

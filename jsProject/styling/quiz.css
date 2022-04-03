@@ -281,6 +281,13 @@ a {
     padding: 25% 0;
 }
 
+#timer{
+  margin-top: 15px;
+  color: #282B49;
+  font-size: 30px;
+
+}
+
 @media (max-width:1279px) and (min-width:769px) {
     .questions {
   
