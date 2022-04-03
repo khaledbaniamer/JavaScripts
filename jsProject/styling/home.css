@@ -44,7 +44,7 @@ p {
 .fade-in-text , h1 {
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 50px;
     color: rgb(255, 255, 255);
     animation: fadeIn linear 9s;
     -webkit-animation: fadeIn linear 9s;
@@ -251,65 +251,7 @@ p {
     transform: scale(1.025);
 }
 
-@media (max-width:1023px) and (min-width:411px) {
-    .button {
-        font-size: 1.5rem;
-        padding: .75rem 2rem;
-    }
-}
 
-
-@media(max-width:960px) {
-    .words span {
-        font-size: 3rem;
-    
-    }
-    
-    .header-text {
-        font-size: 1.5rem !important;
-    }
-    
-    body {
-        overflow: auto;
-        background-color: #2c1437;
-    }
-    
-    p {
-        font-size: 1.2rem !important;
-    }
-    .button {
-        font-size: 0.9rem;
-    }
-
-}
-@media (max-width:640px) and (min-width:425px) {
-    .words span {
-        font-size: 2.5rem;
-    
-    }
-    
-    .header-text {
-        font-size: 2rem !important;
-    }
-    
-    body {
-        overflow: auto;
-        background-color: #2c1437;
-    }
-    
-    p {
-        font-size: 0.85rem !important;
-    }
-    .button {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width:424px) {
-.words span {
-    font-size: 2.5rem;
-   
-}
  .header-text{
     font-size: 2rem !important;
 }
@@ -323,6 +265,77 @@ p{
 .button{
     font-size: 1rem;
 }
+
+
+@media (max-width:1279px) and (min-width:769px) {
+    .button {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+
+    .words span {
+        font-size: 3rem;
+
+    }
+
+    .header-text {
+        font-size: 2rem !important;
+        margin-top: 50px;
+    }
+
+    body {
+        overflow: auto;
+        background-color: #2c1437;
+    }
+
+    p {
+        font-size: 1.2rem !important;
+    }
+
+    .button {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media (max-width:768px) and (min-width:481px) {
+    .words span {
+        font-size: 2.5rem;
+
+    }
+
+    .header-text {
+        font-size: 2rem !important;
+    }
+
+    body {
+        overflow: auto;
+        background-color: #2c1437;
+    }
+
+    p {
+        font-size: 0.85rem !important;
+    }
+
+    .button {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width:480px) {
+    .words span {
+        font-size: 2.5rem;
+
+    }
+
+
+    .fade-in-text,h1 {
+        font-size: 10px !important;
+
+    }
+
 
 }
 
