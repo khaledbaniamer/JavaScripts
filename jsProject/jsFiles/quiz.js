@@ -11,13 +11,13 @@ let count = 1;
 
 
 
-card.innerHTML = `<div id="sectionTest">IQ Test <br> <span>You have five Questions to begin click start </span></div>
+card.innerHTML = `<div id="sectionTest">IQ Test <br> <span>You have five Questions to begin click next </span></div>
 `
 
 next.addEventListener("click" , function(){
  
-
 let t = setInterval(myTimer,1000)
+
 
 //calling Json file 
 
@@ -44,12 +44,12 @@ card.innerHTML = content
 if(count==6){
        
         if(numberOfQustion==5){
-            card.innerHTML = `<div id="sectionTest">English Test <br> <span>You have five Questions to begin click start </span></div>` 
+            card.innerHTML = `<div id="sectionTest">English Test <br> <span>You have five Questions to begin click next </span></div>` 
             count = 0;
             numberOfQustion =4
         }
         if(numberOfQustion==10){
-            card.innerHTML = `<div id="sectionTest">Technical Test <br> <span>You have ten Questions to begin click start </span></div>` 
+            card.innerHTML = `<div id="sectionTest">Technical Test <br> <span>You have ten Questions to begin click next </span></div>` 
             count = 0;
             numberOfQustion =9
         }
@@ -70,7 +70,13 @@ numberOfQustion++;
 
 }
 if(numberOfQustion==20){
-    card.innerHTML=`<p id="viewResult"><a href = "http://127.0.0.1:5500/jsProject/results.html" id="sectionTest">View Results</a></p>`
+    next.disabled = false
+    next.addEventListener("click",function(){
+        window.location.href = "http://127.0.0.1:5500/jsProject/results.html"
+    })
+    
+    card.innerHTML=`<p id="sectionTest">Show Results <br> <span>click next to view results </span></p>`
+    
  
 }
 x.send()
@@ -80,6 +86,8 @@ let second = 59 ;
 let minute = 29;
 let flag ; 
 //let y = setInterval(myTimer,1000)
+
+
 
 function myTimer() {
     
