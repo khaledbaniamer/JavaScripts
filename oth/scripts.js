@@ -156,20 +156,85 @@ if(len%2===0){
     // }
     
     // loadData()  
-    function minMax(arr) {
-        let a = []
-        arr = arr.sort(function(a,b){
-            return a-b ;
-        })
-        a.push(arr[0]);
-        a.push(arr[arr.length-1])
-       return a
-    }
+//     function minMax(arr) {
+//         let a = []
+//         arr = arr.sort(function(a,b){
+//             return a-b ;
+//         })
+//         a.push(arr[0]);
+//         a.push(arr[arr.length-1])
+//        return a
+//     }
 
-console.log(minMax([1, 2, 3, 4, 5]))
-console.log(minMax([2334454, 5]))
-console.log(minMax([1]))
+// console.log(minMax([1, 2, 3, 4, 5]))
+// console.log(minMax([2334454, 5]))
+// console.log(minMax([1]))
 
     //sortIt([4, 10, 3])
 
 
+//     function compareTriplets(a, b) {
+//         // Write your code here
+//         let x = 0 ;
+//         let y = 0 ; 
+//         for (let count =0 ; count < a.length ; count++){
+//           if(a[count]>b[count]){
+//             x++;
+//           }else if(a[count]==b[count]){
+//             x = x ; 
+//             y = y ; 
+//           }else{
+//             y++;
+//           }
+//         } 
+//         return x +" "+ y 
+    
+//     }
+
+//     let a = [1, 2, 3]
+//    let  b = [3, 2, 1]
+
+//    console.log(compareTriplets(a,b))
+
+//  for(let i = 0 ; a[i]!=undefined ; i++){
+//      console.log(a[i])
+//  }
+
+// const reverse = function(x){
+//     let revNum = 0, lastDigit = 0;
+//     while (x!==0) {
+//         lastDigit = x % 10; 
+//         x = parseInt(x/10); 
+//         revNum = revNum * 10 + lastDigit;
+//         if (revNum < Math.pow(-2, 31) || revNum > Math.pow(2, 31) - 1) return 0
+//     }
+//     return revNum
+// }
+// console.log(reverse(-120));
+// let nums1 = [1,2,3]
+// let  nums2 = [2,4,6]
+
+
+
+// var romanToInt = function(s) {
+//     let sum = 0
+//     let numbers = {
+//         "I": 1,"V": 5,"X": 10,"L": 50,
+//         "C": 100,"D": 500,"M": 1000
+//     }   
+//     for (let i = 0; i < s.length; i++){
+
+//     }
+
+// };
+// // let s = "MCMXCIV";
+// // let s = "III";
+
+// let s = "MDCXCV"
+// console.log(romanToInt(s))
+
+
+const randomInt = (min , max)=>Math.floor(Math.random()*(max-min+1)+min)
+
+
+console.log(`rbg(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`)
