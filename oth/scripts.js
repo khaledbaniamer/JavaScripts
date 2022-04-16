@@ -701,10 +701,372 @@ if(len%2===0){
 // console.log(countConsistentStrings(allowed,words))
 
 //2103. Rings and Rods -------- hashing OR hash table --- leetcode
-var countPoints = function(rings) {
+// var countPoints = function(rings) {
+//     let obj ={}
+//     let count = 0;
+
+//     for(let i = 0 ; i<10 ; i++){
+//         if(rings.includes(i)){
+//             obj[i]=""
+//         }
+//     }
+
+//     for(let i=0 ; i<rings.length;i++){
+//         if(rings[i]=="B"){
+            
+//             obj[rings[i+1]]+="B"
+//         }
+//         if(rings[i]=="R"){
+            
+//             obj[rings[i+1]]+="R"
+//         }
+//         if(rings[i]=="G"){
+           
+//             obj[rings[i+1]]+="G"
+//         }
+//     }
+
+//     for(let i in obj){
+//         if(obj[i].includes("B")&&obj[i].includes("R")&&obj[i].includes("G")){
+//             count++
+//         }
+//     }
+
+//     return count
+// };
+
+// let rings = "B0B6G0R6R0R6G9"
+// rings = "B0R0G0R9R0B0G0"
+// rings = "G4"
+// // countPoints(    rings)
+// console.log(countPoints(rings))
+
+//1832. Check if the Sentence Is Pangram -------- hashing OR hash table --- leetcode
+
+// var checkIfPangram = function(sentence) {
+//     let arr =[]
+//     let flag = true
+//     for(let i =0 ; i<sentence.length ; i++){
+//         if(!arr.includes(sentence[i])){
+//             arr.push(sentence[i])
+//         }
+//     }
+//     if(arr.length !=26){
+//         flag=false
+//     }
+//     return flag
+// };
+
+// let sentence = "thequickbrownfoxjumpsoverthelazydog";
+// sentence = "leetcode"
+
+// console.log(checkIfPangram(sentence))
+
+//2206. Divide Array Into Equal Pairs -------- hashing OR hash table --- leetcode
+
+// var divideArray = function(nums) {
+// let obj = {}
+// let flag=true
+// for(let i =0 ; i<nums.length ; i++){
+//     if(obj[nums[i]]==undefined){
+//         obj[nums[i]]=1
+//     }else{
+//         obj[nums[i]]++
+//     }
+// }
+// // console.log(obj)
+// for(let i in obj){
+//     if(obj[i]%2 !=0){
+//         flag = false
+//     }
+// }
+// return flag
+// };
+// let nums = [3,2,3,2,2,2]
+// nums = [1,2,3,4]
+// console.log(divideArray(nums))
+
+//2215. Find the Difference of Two Arrays -------- hashing OR hash table --- leetcode
+
+// var findDifference = function(nums1, nums2) {
+//     let arr =[]
+//     let arr1=[]
+//     let arr2=[]
+//     let len ;
+//     if(nums1.length>nums2.length){
+//         len = nums1.length
+//     }else{
+//          len = nums2.length
+//     }
+
+//     for(let i = 0 ; i<len ; i++){
+//         if(!nums2.includes(nums1[i]) && !arr1.includes(nums1[i]) && nums1[i] !=undefined ){
+//             arr1.push(nums1[i])
+//         }
+//         if(!nums1.includes(nums2[i]) && !arr2.includes(nums2[i])&&  nums2[i] !=undefined){
+//             arr2.push(nums2[i])
+//         }
+//     }
+//     arr[0]=arr1;
+//     arr[1]=arr2;
+
+//     return arr
+// };
+
+
+
+// var findDifference = function(nums1, nums2) {
+//     let arr =[]
+//     let arr1=[]
+//     let arr2=[]
+//     for(let i of nums1){
+//         if(!nums2.includes(i) && !arr1.includes(i)){
+//             arr1.push(i)
+//         }
+//     }
+//     for(let i of nums2){
+//         if(!nums1.includes(i) && !arr2.includes(i)){
+//             arr2.push(i)
+//         }
+//     }
+
+// arr[0]=arr1
+// arr[1]=arr2
+//     return arr
+// };
+
+// let nums1 = [1,2,3], nums2 = [2,4,6]
+// nums1 = [1,2,3,3], nums2 = [1,1,2,2]
+
+
+// nums1 = [-68,-80,-19,-94,82,21,-43]
+// nums2 = [-63]
+
+
+// nums1=[-73]
+// nums2=[-66,9,-54,-32,94,11]
+
+// console.log(findDifference(nums1,nums2))
+
+
+//2225. Find Players With Zero or One Losses -------- hashing OR hash table --- leetcode
+// var findWinners = function(matches) {
+//     let arrWinner = []
+//     let arrLoser = []
+//     let repeatLoser = {}
+//     let repeatWinner= {}
+//     let finalArray =[]
+//     let zero =[]
+//     let one = []
+//     for(let i =0 ; i<matches.length ; i++){
+//         arrWinner.push(matches[i][0])
+//         arrLoser.push(matches[i][1])
+
+//         if(repeatLoser[matches[i][1]] ==undefined ){
+//             repeatLoser[matches[i][1]]=1
+//         }else{
+//             repeatLoser[matches[i][1]]++
+//         }
+
+//         if(repeatWinner[matches[i][0]] ==undefined ){
+//             repeatWinner[matches[i][0]]=1
+//         }else{
+//             repeatWinner[matches[i][0]]++
+//         }
+//     }
+//     for(let i in repeatWinner){
+//         if(!arrLoser.includes(parseInt(i))){
+//             zero.push(parseInt(i))
+//         }
+//     }
+
+//     for(let i in repeatLoser){
+//         if(repeatLoser[i]==1){
+//             one.push(parseInt(i))
+//         }
+//     }
+//     one.sort((a,b)=>a-b)
+//     zero.sort((a,b)=>a-b)
+//     finalArray[0]=zero
+//     finalArray[1]=one
+//     return finalArray;
+// };
+// //Output: [[1,2,10],[4,5,7,8]]
+// let matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]
+// // matches = [[2,3],[1,3],[5,4],[6,4]]
+// // findWinners(matches)
+// console.log(findWinners(matches))
+
+//238. Product of Array Except Self -------- hashing OR hash table --- leetcode
+
+// var productExceptSelf = function(nums) {
+//     let arr=[]
+//     let x = 1
+//     for(let i = 0 ; i<nums.length ; i++){
+//         arr[i]=x
+//         x=arr[i]*nums[i]
+//     }
+//     x=1
+//     for(let i = nums.length-1 ; i>-1 ; i-- ){
+//         arr[i]= x* arr[i]
+//         x= x * nums[i]
+//     }
+//     return arr
+// };
+
+// let nums = [1,2,3,4]
+
+// console.log(productExceptSelf(nums))
+
+
+// 238. checkIfExist max -------- hashing OR hash table --- leetcode
+
+// var checkIfExist = function(arr) {
+//     let arr1 ;
+//        for(let i = 0 ; i<arr.length ; i++){
+//         if(arr[i]==0){
+//             i++
+
+//         }
+//         arr1 = arr[i]*2
+//         if(arr.includes(arr1)){
+//             return true
+//         }
+//     }
     
+//     return false
+// };
+
+// let arr = [10,2,7,6,3]
+
+// arr = [-2,0,10,-19,4,6,-8]
+
+// arr = [0,0]
+
+// // arr =[2,3,3,0,0]
+
+// console.log(checkIfExist(arr))
+
+// 136. Single Number -------- hashing OR hash table --- leetcode
+
+// var singleNumber = function(nums) {
+//     let obj={}
+//     let res ;
+//     for(let i = 0 ; i<nums.length ; i++){
+//         if(obj[nums[i]]==undefined){
+//             obj[nums[i]]=1
+//         }else{
+//             obj[nums[i]]++
+//         }
+//     }
+
+//     for(let i in obj){
+//         if(obj[i]==1){
+//             res = i 
+//         }
+//     }
+
+//     return res
+// };
+
+// let nums = [2,2,1]
+// nums = [4,1,2,1,2]
+// console.log(nums.slice(1))
+
+// console.log(singleNumber(nums))
+
+// 209. Minimum Size Subarray Sum -------- hashing OR hash table --- leetcode
+
+// var minSubArrayLen = function(target, nums) {
+//     let perfixSum = target
+//     let count = 0;
+//     let left = 0 ;
+//     let arr = []
+//     for(let i = left; i<nums.length ; i++){
+//         perfixSum = perfixSum- nums[i]
+//         count++
+        
+//         if(perfixSum<=0){
+//             i =  left++ 
+//             arr.push(count)
+//             count = 0  
+//             perfixSum = target
+            
+//         }
+//     }
+//     arr.sort((a,b)=>a-b)
+//     return arr[0]
+// };
+
+// let target = 7, nums = [2,3,1,2,4,3] // 2  [4,3]
+
+// console.log(minSubArrayLen(target , nums))
+
+// let a =[]
+// a[0] == undefined ? console.log(0)  :console.log(a[0])
+
+// 229. Majority Element II  (n/3)-------- hashing OR hash table --- leetcode
+
+// var majorityElement = function(nums) {
+//     let arr = [];
+//     let obj ={}
+//     if(nums.length/3 <1){
+//         for(let i = 0 ; i<nums.length ; i++){
+//             if(obj[nums[i]]==undefined){
+//                 obj[nums[i]]=1
+//             }else{
+//                 obj[nums[i]]++
+//             }
+//         }
+  
+//         for(let i in obj){
+//             if(obj[i]>nums.length /3 ){
+//                 arr.push(parseInt(i))
+//             }
+//         }
+//         return arr
+//     }else{
+//         for(let i = 0 ; i<nums.length ; i++){
+//             if(obj[nums[i]]==undefined){
+//                 obj[nums[i]]=1
+//             }else{
+//                 obj[nums[i]]++
+//             }
+//         }
+  
+//         for(let i in obj){
+//             if(obj[i]>nums.length /3 ){
+//                 arr.push(parseInt(i))
+//             }
+//         }
+//         return arr
+//     }
+// };
+
+
+// let nums = [3,2,3] 
+// nums = [1,2]
+// nums = [1]
+// nums = [2,2]
+// console.log(majorityElement(nums))
+
+// 264. Ugly Number II-------- hashing OR hash table --- leetcode
+
+var nthUglyNumber = function(n) {
+    let arr = [];
+    let ugly = {1 : 0 , 2:1 , 3:2 , 5:3}
+    let i = 0
+    while(arr.length<n){
+        i++
+        if(i == 1 || ugly[i/2] || ugly[i/3] || ugly[i/5]){
+            arr.push(i)
+        }
+        
+    }
+    return arr[arr.length-1]
 };
 
-let rings = "B0B6G0R6R0R6G9"
-countPoints(rings)
-// console.log(countPoints(rings))
+let n = 10
+console.log(nthUglyNumber(n))//12
+
+
