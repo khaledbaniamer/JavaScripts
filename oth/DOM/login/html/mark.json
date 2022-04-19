@@ -1,0 +1,6 @@
+[
+    {"id":"1" ,"name":"khaled amer","math":"75","physics":"85" , "chemical":"90","pin":"1111"},
+    {"id":"2" ,"name":"amer amer","math":"90","physics":"70" , "chemical":"85","pin":"2222"},
+    {"id":"3" ,"name":"ali maher","math":"70","physics":"50" , "chemical":"40","pin":"3333"},
+    {"id":"4" ,"name":"saleh ahmed","math":"70","physics":"50" , "chemical":"40","pin":"3333"}
+]
