@@ -1052,21 +1052,92 @@ if(len%2===0){
 
 // 264. Ugly Number II-------- hashing OR hash table --- leetcode
 
-var nthUglyNumber = function(n) {
-    let arr = [];
-    let ugly = {1 : 0 , 2:1 , 3:2 , 5:3}
-    let i = 0
-    while(arr.length<n){
-        i++
-        if(i == 1 || ugly[i/2] || ugly[i/3] || ugly[i/5]){
-            arr.push(i)
-        }
+// var nthUglyNumber = function(n) {
+//     let arr = [];
+//     let ugly = {1 : 0 , 2:1 , 3:2 , 5:3}
+//     let i = 0
+//     while(arr.length<n){
+//         i++
+//         if(i == 1 || ugly[i/2] || ugly[i/3] || ugly[i/5]){
+//             arr.push(i)
+//         }
+        
+//     }
+//     return arr[arr.length-1]
+// };
+
+// let n = 10
+// console.log(nthUglyNumber(n))//12
+
+// 1480. Running Sum of 1d Array-------- prefix sum --- leetcode
+
+// var runningSum = function(nums) {
+//     let prefixSum = [] ;
+//     let start = 0 ;
+//     for(let i = 0 ; i<nums.length ; i++){
+//         start = start +nums[i]
+//         prefixSum[i]=start
+//     }
+//     return prefixSum;
+// };
+
+// let nums = [1,2,3,4] ; //[1,3,6,10]
+
+// console.log(runningSum(nums))
+ 
+// 1588. Sum of All Odd Length Subarrays-------- prefix sum --- leetcode //Not solved 
+
+// var sumOddLengthSubarrays = function(arr) {
+//     let prefixSum = 0;
+//     let end =0;
+    
+//     for(let i = 0 ; i<arr.length ; i++){
+//         prefixSum = prefixSum + arr[i]
+//         arr[i]=prefixSum;
+//     }
+//     if(arr.length>3){
+//         end = prefixSum
+//     }
+//     let left = 0
+//     for(let i = 2 ; i<arr.length ; i++){
+        
+//         end = end + arr[i]-left
+//         left = arr[left]
+//         console.log(left)
+        
+        
+//     }
+
+//     console.log(end , prefixSum , end+prefixSum)
+    
+// };
+
+// let arr = [1,4,2,5,3] ; //58
+// arr = [10,11,12]
+// arr = [1]
+
+
+// console.group(sumOddLengthSubarrays(arr))
+
+//1413. Minimum Value to Get Positive Step by Step Sum-------- prefix sum --- leetcode 
+
+var minStartValue = function(nums) {
+    let starterValue1 = 0 ;
+    let prefixSum = 0 ;
+for(let i=0;i<nums.length;i++){
+    starterValue1 = starterValue1 +nums[i]
+    console.log(starterValue1)
+    if(starterValue1 <1){
+        prefixSum += 1-starterValue1
+        starterValue1 += 1-starterValue1
+        
         
     }
-    return arr[arr.length-1]
+}
+  return prefixSum>0 ? prefixSum : 1;
+
 };
 
-let n = 10
-console.log(nthUglyNumber(n))//12
+let nums = [-3,2,-3,4,2] //5
 
-
+console.log(minStartValue(nums))
