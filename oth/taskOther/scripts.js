@@ -1121,23 +1121,90 @@ if(len%2===0){
 
 //1413. Minimum Value to Get Positive Step by Step Sum-------- prefix sum --- leetcode 
 
-var minStartValue = function(nums) {
-    let starterValue1 = 0 ;
-    let prefixSum = 0 ;
-for(let i=0;i<nums.length;i++){
-    starterValue1 = starterValue1 +nums[i]
-    console.log(starterValue1)
-    if(starterValue1 <1){
-        prefixSum += 1-starterValue1
-        starterValue1 += 1-starterValue1
+// var minStartValue = function(nums) {
+//     let starterValue1 = 0 ;
+//     let prefixSum = 0 ;
+// for(let i=0;i<nums.length;i++){
+//     starterValue1 = starterValue1 +nums[i]
+//     console.log(starterValue1)
+//     if(starterValue1 <1){
+//         prefixSum += 1-starterValue1
+//         starterValue1 += 1-starterValue1
         
         
-    }
-}
-  return prefixSum>0 ? prefixSum : 1;
+//     }
+// }
+//   return prefixSum>0 ? prefixSum : 1;
 
+// };
+
+// let nums = [-3,2,-3,4,2] //5
+
+// console.log(minStartValue(nums))
+
+
+//2089. Find Target Indices After Sorting Array -------- Binary Search --- leetcode 
+
+// var targetIndices = function(nums, target) {
+//     let arr = nums.sort((a,b)=> a-b);
+//     let res = [];
+// for(let i = 0 ; i<arr.length ; i++){
+//     if(arr[i]==target){
+//         res.push(i)
+//     }
+// }
+
+//     return res;
+    
+// };
+
+// let nums = [1,2,5,2,3], target = 2;
+// console.log(targetIndices(nums,target))
+
+//1351. Count Negative Numbers in a Sorted Matrix -------- Binary Search --- leetcode 
+
+// var countNegatives = function(grid) {
+//     let binaryLength = 0 ; 
+    
+//     for(let i = 0 ; i<grid.length ; i++){
+//         for(let j of grid[i]){
+//             if(j<0){
+//                 binaryLength++;
+//             }
+//         }
+//     }
+//     return binaryLength;
+// };
+
+
+// let grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]];
+
+// console.log(countNegatives(grid));
+
+//1337. The K Weakest Rows in a Matrix -------- Binary Search --- leetcode 
+
+var kWeakestRows = function(mat, k) {
+    let res = []
+    for (let i = 0; i < mat.length; i++) {
+        let count =0;
+        
+        for(let j of mat[i]){
+            if(j==1){
+                count++;
+            }
+            
+        }
+        res.push(count)
+    }
+    return res
 };
 
-let nums = [-3,2,-3,4,2] //5
+let  mat = 
+[[1,1,0,0,0],
+ [1,1,1,1,0],
+ [1,0,0,0,0],
+ [1,1,0,0,0],
+ [1,1,1,1,1]], 
+k = 3;
 
-console.log(minStartValue(nums))
+console.log(kWeakestRows(mat,k));
