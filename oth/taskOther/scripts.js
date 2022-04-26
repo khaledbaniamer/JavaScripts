@@ -1181,30 +1181,110 @@ if(len%2===0){
 
 // console.log(countNegatives(grid));
 
-//1337. The K Weakest Rows in a Matrix -------- Binary Search --- leetcode 
+//1337. The K Weakest Rows in a Matrix -------- Binary Search --- leetcode  --- no solved
 
-var kWeakestRows = function(mat, k) {
-    let res = []
-    for (let i = 0; i < mat.length; i++) {
-        let count =0;
+// var kWeakestRows = function(mat, k) {
+//     let res = []
+//     for (let i = 0; i < mat.length; i++) {
+//         let count =0;
         
-        for(let j of mat[i]){
-            if(j==1){
-                count++;
-            }
+//         for(let j of mat[i]){
+//             if(j==1){
+//                 count++;
+//             }
             
-        }
-        res.push(count)
-    }
-    return res
-};
+//         }
+//         res.push(count)
+//     }
+//     return res
+// };
 
-let  mat = 
-[[1,1,0,0,0],
- [1,1,1,1,0],
- [1,0,0,0,0],
- [1,1,0,0,0],
- [1,1,1,1,1]], 
-k = 3;
+// let  mat = 
+// [[1,1,0,0,0],
+//  [1,1,1,1,0],
+//  [1,0,0,0,0],
+//  [1,1,0,0,0],
+//  [1,1,1,1,1]], 
+// k = 3;
 
-console.log(kWeakestRows(mat,k));
+// console.log(kWeakestRows(mat,k));
+
+//704. Binary Search  ---- Binary search leet code 
+
+// var search = function(nums, target) {
+//     let l = 0;
+//     let h = nums.length -1 ;
+//     let m =parseInt((nums.length)/2);
+//     while (l<=h) {
+//         if(nums[m]!=target){  
+//         if(l==h && h==m){
+//             return -1;
+//         }
+//         if(nums[m]>target){
+//             h=m-1;
+            
+//             m=parseInt((h+l)/2);
+//         }
+//         else{
+//             l=m+1;
+//             h=nums.length -1;
+//             m=parseInt((h+l)/2);
+//         }
+
+//     }else{
+//         nums[m]==target;
+//         return m;    
+        
+//     }
+//     }
+  
+//     return m ? m:-1;
+    
+// };
+
+// let nums = [-1,0,3,5,9,12], target =88;
+// console.log(search(nums,target));
+ 
+// var search2 = function(nums,target){
+// let left = 0, right = nums.length - 1;
+    
+// while (left < right) {
+//     let center = left + Math.ceil((right-left)/2);
+    
+//     if (target < nums[center]) {
+//         right = center - 1
+//     } else {
+//         left = center; 
+//     }
+// }
+// return nums[left] == target ? left : -1;
+// }
+
+
+//35. Search Insert Position ---- Binary search leet code 
+
+// var searchInsert = function(nums, target) {
+//     let l = 0 ; 
+//     let h = nums.length - 1;
+//     if(nums[0]>target){
+//         return 0 ;
+//     }
+//     while(l<h){
+//         let c = l + Math.ceil((h-l)/2)
+
+//         if(target<nums[c]){
+//             h=c-1;
+//         }else{
+//             l=c ; 
+//         }
+//     }
+//     return target == nums[l]? l : l+1 ;
+// };
+
+// let nums = [1,3,5,6], target = 5;
+
+//  nums = [1,3,5,6], target = 2;
+//  nums = [1,3,5,6], target = 7;
+//  nums = [1,3,5,6], target = 0;
+
+// console.log(searchInsert(nums,target))
