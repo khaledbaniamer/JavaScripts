@@ -1288,3 +1288,33 @@ if(len%2===0){
 //  nums = [1,3,5,6], target = 0;
 
 // console.log(searchInsert(nums,target))
+
+
+//287. Find the Duplicate Number ---- Binary search leet code 
+
+// var findDuplicate = function(nums) {
+//     let object ={};
+//     for (let i = 0; i < nums.length; i++) {
+//         if(object[nums[i]]){
+//             return nums[i];
+//         }else{
+//             object[nums[i]]=1;
+//         }
+        
+//     }
+// };
+var findDuplicate = function(nums) {
+    let arr =[];
+    for (let i = 0; i < nums.length; i++) {
+        if(arr.includes(nums[i])){
+            return nums[i];
+        }else{
+            arr[i]=nums[i];
+        }
+    }
+};
+
+
+let nums = [1,3,4,2,2];
+nums = [3,1,3,4,2];
+console.log(findDuplicate(nums))
