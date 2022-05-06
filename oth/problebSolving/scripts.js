@@ -1303,18 +1303,133 @@ if(len%2===0){
         
 //     }
 // };
-var findDuplicate = function(nums) {
-    let arr =[];
-    for (let i = 0; i < nums.length; i++) {
-        if(arr.includes(nums[i])){
-            return nums[i];
-        }else{
-            arr[i]=nums[i];
-        }
-    }
-};
+// var findDuplicate = function(nums) {
+//     let arr =[];
+//     for (let i = 0; i < nums.length; i++) {
+//         if(arr.includes(nums[i])){
+//             return nums[i];
+//         }else{
+//             arr[i]=nums[i];
+//         }
+//     }
+// };
 
 
-let nums = [1,3,4,2,2];
-nums = [3,1,3,4,2];
-console.log(findDuplicate(nums))
+// let nums = [1,3,4,2,2];
+// nums = [3,1,3,4,2];
+// console.log(findDuplicate(nums))
+
+// var sumOfUnique = function(nums) {
+//     let obj = {};
+//     let sum = 0; 
+    
+//     for (let i = 0 ; i<nums.length ; i++){
+//         if(obj[nums[i]]){
+//             obj[nums[i]]++
+//         }else{
+//             obj[nums[i]] = 1;
+            
+//         }
+//     }
+//     for (let i in obj) {
+//         if (obj[i] === 1) sum += +i;
+//       }
+//     return sum;
+// };
+
+// let nums = [1,2,3,2];
+// nums = [1,1,1,1,1];
+// nums = [1,2,3,4,5];
+// console.log(sumOfUnique(nums))
+
+// var maxAbsoluteSum = function(nums) {
+//     let maxSum = nums[0];
+//     currSum = 0;
+
+//     for(let i of nums){
+        
+//         currSum += i;
+        
+//         maxSum = Math.max(Math.abs(maxSum) ,Math.abs(currSum)); 
+//     }
+//     return maxSum;
+// };
+
+// let nums = [1,-3,2,3,-4];
+// nums = [2,-5,1,-4,3,-2];
+// console.log(maxAbsoluteSum(nums));
+
+// var missingNumber = function(nums) {
+    // nums.sort((a,b) => a-b);
+    // let test = 0;
+    // right = nums.length -1;
+    
+    // while(test == nums[test]){
+
+    //     test++;
+        
+    // }
+    // return test;
+
+    // let result = nums.length;
+    
+    // for (let i = 0; i < nums.length; i++) {
+    //     console.log(result)
+    //     result += i - nums[i];
+        
+    // }
+    
+    // return result
+    
+// };
+
+// let nums = [9,6,4,2,3,5,7,0,1];
+// console.log(missingNumber(nums));
+
+
+// var isPalindrome = function(s) {
+//     const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" , "0" ,"1" ,"2","3","4","5","6","7","8" , "9" ];
+    
+//     let newArray =[];
+//     let newArray1  = [];
+//     for(let i = 0 ; i < s.length ; i++){
+//         if(alphabet.includes(s[i].toLowerCase())) newArray.push(s[i].toLowerCase());
+//     }
+//     for (let i = s.length-1; i >= 0 ; i--) {
+//         if(alphabet.includes(s[i].toLowerCase())) newArray1.push(s[i].toLowerCase());
+        
+//     }
+//     newArray1 = newArray1.join("");
+//     newArray = newArray.join("");
+
+//     if(newArray == newArray1){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// };
+// let s = "A man, a plan, a canal: Panama";
+// s = "race a car";
+// s ="0P";
+// console.log(isPalindrome(s))
+
+// var twoSum = function(numbers, target) {
+//     let left = 0 ; 
+//     let right = numbers.length -1 ;
+    
+//     while (left<right) {
+//         let sum = numbers[left]+numbers[right];
+
+//         if(sum>target) right +=-1;
+//         else if(sum<target) left ++;
+//         else return [left+1 , right+1];
+//     }
+
+// };
+
+// let numbers = [2,7,11,15], target = 9;
+// numbers = [0,0,3,4]
+// target = 0
+// console.log((7/2))
+
+// console.log(twoSum(numbers , target));
