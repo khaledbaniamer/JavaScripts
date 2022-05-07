@@ -15,18 +15,58 @@
 //206. Reverse Linked List  ---- linked list
 
 
-var reverseList = function(head) {
+// var reverseList = function(head) {
     
+//     let arr =[];
+//     let index = 0;
+//     for(let i = head.length-1 ; i>=0 ; i--){
+//         arr[index] = head[i];
+//         index++;
+//     }
+//     return arr;
+    
+// };
+
+// let head = [1,2,3,4,5];
+// head = [1,2];
+// console.log(reverseList(head))
+
+//1464. Maximum Product of Two Elements in an Array
+
+// var maxProduct = function(nums) {
+//     nums.sort((a,b)=>b-a);
+//     let res = (nums[0]-1)* (nums[1]-1);
+
+//     return res;
+// };
+
+// let nums = [3,4,5,2];
+// console.log(maxProduct(nums))
+
+//1337. The K Weakest Rows in a Matrix
+
+var kWeakestRows = function(mat, k) {
     let arr =[];
-    let index = 0;
-    for(let i = head.length-1 ; i>=0 ; i--){
-        arr[index] = head[i];
-        index++;
+    for (let i = 0; i < mat.length; i++) {
+        let count =0 ;
+        for (let j = 0; j < mat[i].length; j++) {
+            if(mat[i][j] == 1){
+                count++
+            }
+        }
+        arr.push(count);
     }
-    return arr;
     
+
 };
 
-let head = [1,2,3,4,5];
-head = [1,2];
-console.log(reverseList(head))
+let mat = 
+[[1,1,0,0,0],
+ [1,1,1,1,0],
+ [1,0,0,0,0],
+ [1,1,0,0,0],
+ [1,1,1,1,1]], 
+k = 3;
+
+console.log(kWeakestRows(mat,k));
+
